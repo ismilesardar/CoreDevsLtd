@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useRef, useState } from "react";
 import hitToast from "../helpers/hitToast";
 
 export default function SubscriptionForm() {
@@ -23,7 +23,7 @@ export default function SubscriptionForm() {
       .then((res) => res.text())
       .then((data) => JSON.parse(data))
       .then((data) =>
-        hitToast(data.message, data.success ? "success" : "error")
+      hitToast(data.message, data.success ? "success" : "error")
       )
       .catch(() =>
         hitToast("error","Something went wrong. Please try again.")

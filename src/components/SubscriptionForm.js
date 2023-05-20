@@ -26,7 +26,7 @@ export default function SubscriptionForm() {
         hitToast(data.message, data.success ? "success" : "error")
       )
       .catch(() =>
-        hitToast("Something went wrong. Please try again.", "error")
+        hitToast("error","Something went wrong. Please try again.")
       );
 
     setAlertClass("");
